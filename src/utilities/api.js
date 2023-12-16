@@ -4,7 +4,6 @@ import moment from "moment";
 
 const authString = btoa(`${import.meta.env.VITE_API_KEY}:${import.meta.env.VITE_SECRET_KEY}`);
 const today = isoDate();
-console.log("today is", today);
 const moonObject = {
   format: "png",
   style: {
