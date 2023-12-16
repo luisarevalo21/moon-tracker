@@ -1,0 +1,185 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  background: #e5e5e5;
+}
+
+.navbar {
+  padding: 0.2em 0;
+  font-size: 1.1rem;
+  text-align: center;
+  background: #8a7f8d;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.navbar h2 {
+  margin: 0.6em;
+}
+.navbar p {
+  margin: 0.1em 0;
+}
+
+.moon-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 1em;
+  padding: 0.5em;
+  text-align: center;
+  /* min-height: 100vh; */
+}
+
+.moon-location-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.moon-location-details h2 {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.moon-location-details p {
+  margin: 0.5em;
+}
+
+.load-more {
+  padding: 0.7em 0.3em;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: none;
+  background: #c9c9c9;
+  color: #000;
+  cursor: pointer;
+  width: 70%;
+  margin: 0.8em auto;
+}
+.load-more:disabled:hover {
+  cursor: not-allowed;
+  background: grey;
+}
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.close-btn {
+  font-size: 1.4rem;
+  /* padding: 0.5em; */
+  border: none;
+  border-radius: 5px;
+
+  padding: 0.5em 0;
+  background: #8a7f8d;
+  width: 50px;
+  margin-top: 0.9em;
+}
+
+.moon-phases {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.moon-item {
+  margin-bottom: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.moon-item-details {
+  text-align: center;
+}
+.moon-item img {
+  margin: 0 auto;
+}
+
+.moon-item-details h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error h3 {
+  color: red;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.next-full-moon {
+  font-weight: bold;
+}
+
+@media (min-width: 500px) {
+  .navbar {
+    font-size: 1.5rem;
+  }
+
+  .moon-location-details h2 {
+    font-size: 2rem;
+  }
+  .moon-location-details p {
+    font-size: 1.5rem;
+  }
+  .moon-location-details img {
+    width: 500px;
+  }
+  .load-more {
+    width: 200px;
+  }
+  .moon-phases {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .moon-item {
+    margin-right: 2em;
+  }
+  .moon-item-details {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .moon-item-details h2 {
+    margin: 0;
+  }
+  .moon-item img {
+    max-width: 500px;
+  }
+}

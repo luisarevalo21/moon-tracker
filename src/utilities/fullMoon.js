@@ -1,0 +1,80 @@
+export const fullMoons = [
+  {
+    month: "December",
+    monthNumber: 12,
+    day: 26,
+    year: 2023,
+  },
+  {
+    month: "January",
+    monthNumber: 1,
+    day: 25,
+    year: 2024,
+  },
+  {
+    month: "February",
+    monthNumber: 2,
+    day: 24,
+    year: 2024,
+  },
+  {
+    month: "March",
+    monthNumber: 3,
+    day: 25,
+    year: 2024,
+  },
+  {
+    month: "April",
+    monthNumber: 4,
+    day: 23,
+    year: 2024,
+  },
+  {
+    month: "May",
+    monthNumber: 5,
+    day: 23,
+    year: 2024,
+  },
+  {
+    month: "June",
+    monthNumber: 6,
+    day: 21,
+    year: 2024,
+  },
+  {
+    month: "July",
+    monthNumber: 7,
+    day: 21,
+    year: 2024,
+  },
+  {
+    month: "August",
+    monthNumber: 8,
+    day: 19,
+    year: 2024,
+  },
+  {
+    month: "September",
+    monthNumber: 9,
+    day: 17,
+    year: 2024,
+  },
+  {
+    month: "October",
+    monthNumber: 10,
+    day: 17,
+    year: 2024,
+  },
+  {
+    month: "November",
+    monthNumber: 11,
+    day: 15,
+    year: 2024,
+  },
+  {
+    month: "December",
+    monthNumber: 12,
+    day: 15,
+    year: 2024,
+  },
+];
