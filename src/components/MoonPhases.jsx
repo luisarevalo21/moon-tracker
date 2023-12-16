@@ -4,7 +4,13 @@ import Modal from "./Modal";
 
 const MoonPhases = ({ weekMoon, loadMore, geoLocation }) => {
   const moons = weekMoon.map(moon => (
-    <MoonItem date={moon.date} imageUrl={moon.imageUrl} location={moon.location} geoLocation={geoLocation} />
+    <MoonItem
+      key={moon.date}
+      date={moon.date}
+      imageUrl={moon.imageUrl}
+      location={moon.location}
+      geoLocation={geoLocation}
+    />
   ));
   return (
     <div className="moon-phases">

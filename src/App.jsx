@@ -21,7 +21,7 @@ import {
 //
 function App() {
   const [showModal, setShowModal] = useState(true);
-  const [nextFullMoon, setNextFullMoon] = useState({});
+  const [nextFullMoon, setNextFullMoon] = useState("");
   const [moon, setMoon] = useState([]);
   const [weekMoon, setWeekMoon] = useState([]);
   const [location, setLocation] = useState(null);

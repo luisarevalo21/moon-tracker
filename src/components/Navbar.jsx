@@ -1,7 +1,8 @@
 import React from "react";
 
 import { getDaysLeftTillFullMoon } from "../utilities/api";
-const Navbar = ({ nextFullMoon }) => {
+const Navbar = nextFullMoon => {
+  console.log("next full moon", nextFullMoon);
   const daysLeft = getDaysLeftTillFullMoon(nextFullMoon);
   const { day, monthNumber, year } = nextFullMoon;
   return (
@@ -11,10 +12,16 @@ const Navbar = ({ nextFullMoon }) => {
         <span> 🌑</span>
       </h2>
       <p>
-        The next full moon will be: {monthNumber}/{day}/{year}
+        The next full moon will be:
+        <span className="bold">
+          {" "}
+          {monthNumber}/{day}/{year}
+        </span>{" "}
         🌕
       </p>
-      <p>Only {daysLeft} days left till the next full moon 🌕</p>
+      <p>
+        Only <span className="bold">{daysLeft}</span> days left till the next full moon 🌕
+      </p>
     </div>
   );
 };

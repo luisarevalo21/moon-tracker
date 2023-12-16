@@ -3,7 +3,8 @@ import { fullMoons } from "./fullMoon";
 import moment from "moment";
 
 const authString = btoa(`${import.meta.env.VITE_API_KEY}:${import.meta.env.VITE_SECRET_KEY}`);
-const today = moment();
+const today = isoDate();
+console.log("today is", today);
 const moonObject = {
   format: "png",
   style: {
@@ -26,6 +27,7 @@ const moonObject = {
 export async function fetchMoonData(location, moonData = moonObject) {
   const copy = { ...moonData };
 
+  // console.log("copy", copy.observer.date);
   copy.observer.latitude = location.latitude;
   copy.observer.longitude = location.longitude;
   return fetch("https://api.astronomyapi.com/api/v2/studio/moon-phase", {
@@ -74,12 +76,19 @@ function filterFullMoons() {
 }
 
 export function getDaysLeftTillFullMoon(nextFullMoon) {
+  const [year, month, day] = today.split("-");
+
+  const todayMoment = moment({
+    year: year,
+    month: Number(month) - 1,
+    day: day,
+  });
   const nextMoon = moment({
     year: nextFullMoon.year,
     month: nextFullMoon.monthNumber - 1,
     day: nextFullMoon.day,
   });
-  return Math.abs(today.diff(nextMoon, "days"));
+  return Math.abs(todayMoment.diff(nextMoon, "days"));
 }
 
 export function fetchNextFullMoon() {
