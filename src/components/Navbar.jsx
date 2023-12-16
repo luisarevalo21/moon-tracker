@@ -1,7 +1,7 @@
 import React from "react";
 
 import { getDaysLeftTillFullMoon } from "../utilities/api";
-const Navbar = nextFullMoon => {
+const Navbar = ({ nextFullMoon }) => {
   console.log("next full moon", nextFullMoon);
   const daysLeft = getDaysLeftTillFullMoon(nextFullMoon);
   const { day, monthNumber, year } = nextFullMoon;
